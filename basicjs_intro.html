@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic of Javascript</title>
+</head>
+<body>
+    <h1>Javascript</h1>
+    <pre>
+        -Old name:EcmaScript
+        -version abreviation as Es
+        -Version: Es1,Es2,Es3,Es4,Es5,Es6,Es8.....
+        -Maj6or version:Es5 and Es
+    </pre>
+    <pre>
+        -Types of Javascript
+        -Internal(Embeded) JS
+       - External JS
+        -Inline
+    </pre>
+    <pre>
+        -keyboard event(onkey up/)
+        -mouse event(onclick etc)
+        -window event(onload) etc
+        -Form event(on change,onfocus etc)
+    </pre>
+    <p id="text">This is default text.</p>
+    <button type="button" id="add">Add text</button>
+    <button type="button" id="remove">Remove text</button>
+    <script>
+        //single line comment
+        /*
+        Multi line comment
+        */
+       var add=document.getElementById("add");
+       var remove=document.getElementById("remove");
+       var para=document.getElementById("text");
+       console.log(add);
+       console.log(remove);
+
+       //element.addEventListner("event",callback_function());
+
+        add.addEventListener("click",function(){
+            para.innerText="Text add from Javascript";
+        });
+        remove.addEventListener("click",function(){
+            para.innerText= "";
+        });
+    </script>
+    <h2>Inline:JS event handler(Direct event attribute on HTML-DOM element)</h2>
+    <button onclick="alert('I am clicked!')">Click Me</button>
+    <h2>What is DOM?</h2>
+    <pre>
+        Note:JS work with dom elements.
+        DOM:Document object Model
+        (A tree structure of the HTML-DOM exists in browser)
+        HTML Document:Source code -DOM-Tree
+        DOM-Tree:After interpretation of HTML-Source by the browser. 
+        Note: Check inside element area under  developer tool of the browser.
+
+        #DOM element selector in JS
+        syntax: document.methodName('selectorName')
+        Methods
+        -document.getElementById('idname');
+        -document.getElementByClassName('classname')
+        -document.getElementByTagname('tagname');
+        -document.querySelector('CSS_Selector');//Single
+        -document.querySelectorAll('CSS_Selector');//Multiple in array
+        -document.form_name;or document.form_name.field_name;
+
+        #Variable making keyword
+        -var:redeclare and redefine is possible
+        -let:redeclare is not possible but redefine is possible
+        -const:redeclare and redefine is not possible
+    </pre>
+    <script type="text/javascript">
+        var a ;//declare
+        a=10;//define
+        a=5;//redefine
+        var a;//redeclare (making same name variable)
+        //check output
+
+        console.log(a);
+    </script>
+    <p><em>Note:External JS demo in contact.html</em></p>
+</body>
+</html>
