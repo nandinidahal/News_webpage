@@ -1,8 +1,15 @@
 *{
     box-sizing: border-box;/* css3 property*/
     zoom:1;
-    background-color:black;
+    /* background-color:black; */
 }
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*nav bar css */
 .main-nav ul{
     display: flex;/* CSS3 property*/
     flex-wrap:wrap;
@@ -29,12 +36,10 @@
     color:#2272FF;
 } 
 .header{
-    background-color:black;
-    padding:10px;
+    background-color:#111;
+    padding:20px;
 }
-body{
-    margin:0;
-}
+
 .row{
     max-width: 1200px;
     margin: 0 auto;
@@ -74,7 +79,8 @@ input,textarea{
     width:100%;
     padding:3px 10x;
     border:2px solid#fff;
-    color:#fff;
+    /* color:#fff; */
+    color:#9b9b9b;
 }
 .field-group{
     margin-bottom: 10px;
@@ -110,11 +116,16 @@ button{
     justify-content: space-between;
     align-items: center;
     margin:0 auto;
+    /* gap: 10px; */
 }
 .blog-box{
     width:350px; 
+    /*width:auto; then the box align vertically */
     margin: 10px;
-    border-radius: 10px;   
+    border-radius: 10px; 
+    display: flex;
+    flex-wrap: wrap; /* allows items to wrap to next line if not enough space */
+    /* overflow: hidden;  */
 }
 
 .blog-img{
@@ -153,6 +164,10 @@ button{
     overflow:hidden;
     font-style: oblique;
 }
+
+
+
+
 
 /*css blog-detail page*/
 #title .topic{
@@ -266,18 +281,48 @@ img{
 } */
  /*CSS for footer2*/
 
-
-
- .footer {
+.footer {
     width: 100%;
-    /* background-color: black; */
+    background-color: #111;  /* Slightly lighter black for contrast */
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 14px;
+    border-top-left-radius: 80px; /* Slightly smaller radius */
+    border-top-right-radius: 80px; /* Add symmetry */
+}
+
+/* Container inside footer */
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Add gap for spacing */
+}
+/*
+ .footer {
+    /*width: 100%;
+    /* background-color: black; 
     background-color:#111 ;
     color: white;
     padding: 40px 0 20px;
-    /* padding: 60px 80px; */
+    /* padding: 60px 80px; 
     text-align: center;
     margin-bottom:0;
-    /* background: #0b1c2d; */
+    /* background: #0b1c2d; 
+
+    width:100%;
+    /*bottom:0;*/
+    /*position:relative;
+    background-color:black;
+    color:white;
+    padding:30px 0;
+    text-align: center;
+    font-size:14px;
+    border-top-left-radius:125px;
     
 }
 
@@ -288,14 +333,17 @@ img{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    border-top-left-radius:125px;
     /* background: none; 
-    */
-}
+    
+}*/
 
 .footer-container1 {
     width: 30%;
     padding: 10px;
-    text-align: justify;
+    /* text-align: justify; */
+     text-align: left; /* Better readability than justify */
+    min-width: 250px; /* Prevent shrinking too small */
     /* background: none;  */
 }
 

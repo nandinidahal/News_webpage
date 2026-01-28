@@ -1,0 +1,74 @@
+/* Container for all blog boxes new updated */
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* space between blog boxes */
+  max-width: 1200px;
+  margin: 40px auto; /* center with vertical spacing */
+  padding: 0 10px; /* some horizontal padding */
+  align-items: flex-start; /* align top for boxes with varying height */
+}
+
+/* Each blog box */
+.blog-box {
+  flex: 1 1 300px; /* flexible: minimum 300px width */
+  max-width: 350px; /* limit max width */
+  background-color: #111; /* dark background */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0,0,0,0.7);
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+/* Blog image container */
+.blog-img img {
+  width: 100%;
+  height: 200px; /* fixed height for uniformity */
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Blog text content */
+.blog-text {
+  padding: 15px 20px;
+  flex-grow: 1; /* take remaining vertical space */
+}
+
+/* Blog title link */
+.blog-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ea940c; /* highlight color */
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.blog-title:hover {
+  text-decoration: underline;
+  color: #ffb84d;
+}
+
+/* Blog excerpt paragraph */
+.blog-text p {
+  color: #ccc;
+  font-style: italic;
+  line-height: 1.4;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blog-container {
+    justify-content: center;
+  }
+  .blog-box {
+    flex: 1 1 90%; /* full width on smaller screens */
+    max-width: none;
+  }
+}
